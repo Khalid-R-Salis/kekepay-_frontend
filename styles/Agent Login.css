@@ -1,0 +1,388 @@
+:root {
+  --color-success: #006400;
+  --color-warning: #ffc107;
+  --color-denger: #f75842;
+  --color-white: #fff;
+  --color-black: #000;
+
+  --container-width-lg: 100%;
+  --container-width-md: 90%;
+  --container-width-sm: 94%;
+
+  --transition: all 400ms ease;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(image\ 4.png);
+  background-repeat: no-repeat;
+}
+
+/* nav */
+
+nav {
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  background: #fff;
+}
+
+.nav__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+
+}
+
+.nav__container img {
+  width: 150px;
+  height: 34px;
+  flex-shrink: 0;
+  margin-left: 6rem;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-top: -1.5rem;
+  font-size: 20px;
+}
+
+.nav__menu .list {
+  width: 380px;
+  position: absolute;
+  margin-top: 1.2rem;
+}
+
+.dpd{
+  padding: 5px 10px;
+  border: 2px solid rgb(141, 141, 27);
+  border-radius: 5px;
+}
+.lngs{
+  color: green;
+}
+
+.list .option {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  background: red;
+  height: 55px;
+  cursor: pointer;
+  padding: 0 16px;
+  width: 40%;
+  transform-origin: top;
+  transform: scale(0) translateY(-65px);
+  margin-bottom: -55px;
+}
+
+.nav__menu .language .active~.list .option {
+  transform: scale(1) translateY(0);
+  margin-bottom: 0;
+}
+
+.list .option:hover {
+  background: var(--color-white);
+}
+
+.list .option:nth-child(1) {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.list .option:nth-child(5) {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.option .option-text {
+  font-size: 1.1rem;
+}
+
+.nav__menu a {
+  color: var(--color-black);
+}
+
+.nav_button {
+  margin-top: -1.5rem;
+  margin-right: 6rem;
+}
+
+.window-scroll {
+  background: var(--color-white);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.nav__menu .language {
+  background: transparent;
+  position: relative;
+  color: var(--color-black);
+  padding: 6px 4px;
+  border-radius: 1rem;
+  color: rgba(0, 0, 0, 0.50);
+  gap: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.50);
+}
+
+.nav__menu .language i {
+  color: var(--color-black);
+  width: 18px;
+  height: 18px;
+  margin: 0.3rem;
+  transition: 0.4s;
+}
+
+.nav__menu .active .language i {
+  transform: rotate(180deg);
+}
+
+.nav__menu a {
+  color: var(--color-black);
+}
+
+.nav__menu .language {
+  margin-left: 0;
+}
+
+.action_btn {
+  background: var(--color-warning);
+  color: var(--color-black);
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav ul li{
+  list-style-type: none;
+}
+nav a {
+  text-decoration: none
+}
+
+main {
+  overflow: hidden;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+.action_btn {
+  background: var(--color-warning);
+  color: var(--color-black);
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.lotion_btn {
+  color: var(--color-warning);
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 1.3rem;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/*  */
+
+.container {
+  margin-inline: auto;
+  margin-top: 100px;
+  box-sizing: border-box;
+  width: 450px;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  /* border: 1px solid black; */
+  height: 450px;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border-radius: 13px;
+  box-shadow: rgb(44, 44, 44) 3px 3px 6px 1px;
+  background-color: #fff;
+}
+
+/* Specific styles for the container */
+.container .logo {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 157px;
+}
+
+.container h3 {
+  display: flex;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+}
+
+.container label {
+  margin-left: 50px;
+  display: inline-block;
+  text-decoration: left;
+  width: 60px;
+  position: absolute;
+  font-size: 13px;
+  transform: translate(-40%);
+  pointer-events: none;
+  background: transparent;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  margin-top: -8px;
+}
+
+.container #ID {
+  padding: 12px;
+  border-radius: 10px;
+  width: 330px;
+  border: 2px solid rgb(160, 159, 159);
+}
+
+.container #pass {
+  padding: 12px;
+  border-radius: 10px;
+  width: 330px;
+  border: 2px solid gray;
+}
+
+.container .password {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.container .ID {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.container .Check {
+  margin-left: 40px;
+  margin-top: 40px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container a {
+  margin-left: 80px;
+  text-decoration: none;
+  color: green;
+}
+
+.container #button {
+  padding: 10px;
+  margin-left: 90px;
+  margin-top: 70px;
+  width: 250px;
+  border-radius: 20px;
+  border: none;
+  background-color: #FFC107;
+  cursor: pointer;
+}
+
+.container #button:hover {
+  box-shadow: rgb(170, 169, 169) 3px 3px 6px 1px;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.container #Forgot {
+  margin-left: 60px;
+}
+
+/* Footer styles */
+footer {
+  width: 94.5%;
+  background: #051c12;
+  padding: 20px 50px;
+  margin-top: 4rem;
+}
+/* footer styles */
+.reach {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reach i {
+  width: 40px;
+  padding-right: 7px;
+  color: #c7b215;
+}
+
+footer {
+  background: #051c12;
+  padding: 20px 50px;
+  margin-top: 4rem;
+}
+
+.reach-us {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text h3 {
+  color: #fff;
+  font-family: Segoe UI;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: -10px;
+  line-height: normal;
+}
+
+.text p {
+  color: #fff;
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+}
+
+.footer-line {
+  background: white;
+  height: 1px;
+  margin-top: .60rem;
+  margin-bottom: .60rem;
+}
+
+
+.mainfoot {
+  color: #fff;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer span {
+  text-decoration: underline;
+}
