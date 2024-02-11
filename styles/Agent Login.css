@@ -22,7 +22,12 @@ body {
 }
 
 /* nav */
-
+.topnav {
+  display: none;
+}
+.mobilenav {
+  display: none;
+}
 nav {
   width: 100vw;
   height: 5rem;
@@ -38,7 +43,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
-
 }
 
 .nav__container img {
@@ -62,12 +66,12 @@ nav {
   margin-top: 1.2rem;
 }
 
-.dpd{
+.dpd {
   padding: 5px 10px;
   border: 2px solid rgb(141, 141, 27);
   border-radius: 5px;
 }
-.lngs{
+.lngs {
   color: green;
 }
 
@@ -85,7 +89,7 @@ nav {
   margin-bottom: -55px;
 }
 
-.nav__menu .language .active~.list .option {
+.nav__menu .language .active ~ .list .option {
   transform: scale(1) translateY(0);
   margin-bottom: 0;
 }
@@ -128,12 +132,12 @@ nav {
   color: var(--color-black);
   padding: 6px 4px;
   border-radius: 1rem;
-  color: rgba(0, 0, 0, 0.50);
+  color: rgba(0, 0, 0, 0.5);
   gap: 4px;
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.50);
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .nav__menu .language i {
@@ -168,11 +172,11 @@ nav {
   cursor: pointer;
 }
 
-nav ul li{
+nav ul li {
   list-style-type: none;
 }
 nav a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 main {
@@ -226,7 +230,7 @@ section {
 
 /* Specific styles for the container */
 .container .logo {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -283,7 +287,8 @@ section {
 .container .Check {
   margin-left: 40px;
   margin-top: 40px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .container a {
@@ -299,7 +304,7 @@ section {
   width: 250px;
   border-radius: 20px;
   border: none;
-  background-color: #FFC107;
+  background-color: #ffc107;
   cursor: pointer;
 }
 
@@ -311,6 +316,9 @@ section {
 
 .container #Forgot {
   margin-left: 60px;
+}
+.mobileFooter {
+  display: none;
 }
 
 /* Footer styles */
@@ -368,10 +376,9 @@ footer {
 .footer-line {
   background: white;
   height: 1px;
-  margin-top: .60rem;
-  margin-bottom: .60rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
 }
-
 
 .mainfoot {
   color: #fff;
@@ -385,4 +392,122 @@ footer {
 
 footer span {
   text-decoration: underline;
+}
+
+/* mobile view */
+@media (max-width: 765px) {
+  /* Resetting some styles */
+  .nav__container {
+    display: none;
+  }
+
+  /* mobile nav */
+  .topnav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 25px;
+    z-index: 999;
+  }
+
+  .mobilenav {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+    height: 20rem;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    z-index: 999;
+    padding: 2px;
+    transition: opacity 0.5s ease;
+  }
+
+  .mobilenav.show {
+    display: flex;
+    opacity: 1;
+  }
+
+  .mobilenav ul a {
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+  }
+  .mobilenav ul li {
+    list-style-type: none;
+  }
+  .navlogo {
+    width: 100px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    margin-top: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    /* border: 1px solid black; */
+    height: 450px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    border-radius: 13px;
+    box-shadow: rgb(44, 44, 44) 3px 3px 6px 1px;
+    background-color: #fff;
+  }
+
+  footer {
+    display: none;
+  }
+
+  /* ---------------------------- */
+  .mobileFooter {
+    margin-top: 50px;
+    padding: 0 1rem;
+    color: white;
+    background-color: #051c12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+  .ml {
+    background: white;
+    height: 1px;
+    width: 100%;
+    margin-top: 1.6rem;
+    margin-bottom: 0.6rem;
+  }
+  .mlinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mlinks a {
+    color: white;
+    text-decoration: none;
+  }
+  .mc {
+    margin-top: -10px;
+    line-height: 15px;
+    font-size: 15px;
+  }
 }
