@@ -434,6 +434,7 @@ footer span {
   }
 
   .topnav {
+    background: white;
     display: block;
     position: fixed;
     top: 0;
@@ -522,5 +523,8 @@ footer span {
     margin-top: 2px;
     line-height: 15px;
     font-size: 15px;
+  }
+  fieldset {
+    border-radius: 50px;
   }
 }

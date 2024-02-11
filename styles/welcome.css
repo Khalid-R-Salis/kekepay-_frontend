@@ -21,6 +21,9 @@ nav {
   z-index: 11;
   background: #fff;
 }
+.mobilenav {
+  display: none;
+}
 
 .nav__container {
   height: 100%;
@@ -348,6 +351,7 @@ footer span {
   }
 
   .topnav {
+    background: white;
     display: block;
     position: fixed;
     top: 0;
@@ -439,12 +443,16 @@ footer span {
     font-size: 15px;
   }
 
-  .fieldset i {
-    display: none;
-    position: absolute;
+  fieldset {
+    position: relative;
     left: 0%;
     bottom: 14px;
     margin-left: 0;
-    color: rebeccapurple;
+  }
+  fieldset input {
+    width: 16rem;
+    height: 50px;
+    padding: 0;
+    border: 0;
   }
 }
