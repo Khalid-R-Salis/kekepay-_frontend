@@ -1,157 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ================ FONT AWESOME CDN ==================================== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="../styles/Signup.css">
-    <link rel="stylesheet" href="../styles/welcome.css">
+    <link rel="stylesheet" href="../styles/Signup.css" />
+    <link rel="stylesheet" href="../styles/welcome.css" />
     <title>Create an account</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div class="topnav">
+      <img class="navlogo" src="../Images/logo.jpg" alt="" />
+      <img id="navshow" src="../Images/icon-menu.svg" alt="" />
+    </div>
+
+    <div class="mobilenav" id="mobilenav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../HTML/Agent Login.html">Agents</a></li>
+        <li><a href="../HTML/welcome.html">Get Started</a></li>
+        <li><a href="../HTML/Login.html">Login</a></li>
+      </ul>
+    </div>
 
     <nav>
-        <div class="nav__container">
-          <a href="#"><img src="../Images/logo.jpg" /></a>
-  
-          <ul class="nav__menu">
-            <select name="dropdown" class="dpd">
-              <option value="English" class="lngs">English</option>
-              <option value="English" class="lngs">Hause</option>
-              <option value="English" class="lngs">France</option>
-              <option value="English" class="lngs">Yoruba</option>
-            </select>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="../HTML/Agent Login.html">Agents</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-  
-          <div class="nav_button">
-            <a href="../HTML/Login.html" class="lotion_btn">Log in</a>
-            <a href="../HTML/welcome.html" class="action_btn">Get Started</a>
+      <div class="nav__container">
+        <a href="#"><img src="../Images/logo.jpg" /></a>
+
+        <ul class="nav__menu">
+          <select name="dropdown" class="dpd">
+            <option value="English" class="lngs">English</option>
+            <option value="English" class="lngs">Hause</option>
+            <option value="English" class="lngs">France</option>
+            <option value="English" class="lngs">Yoruba</option>
+          </select>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="../HTML/Agent Login.html">Agents</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+
+        <div class="nav_button">
+          <a href="../HTML/Login.html" class="lotion_btn">Log in</a>
+          <a href="../HTML/welcome.html" class="action_btn">Get Started</a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <aside>
+        <img src="../Images/image2.png" alt="image2" />
+      </aside>
+      <section>
+        <div class="container">
+          <div class="right-side">
+            <div class="form-content">
+              <!-- ============= LOGO ================= -->
+              <div class="logo">
+                <a href="#"><img src="../Images/Vector.png" alt="logo" /></a>
+              </div>
+              <div class="headings">
+                <h2>Hello! Welcome</h2>
+                <h3>First, please enter your Email</h3>
+              </div>
+              <!-- ================ FORM ================= -->
+              <form action="/verification/send-code" method="POST">
+                <fieldset>
+                  <legend>Email</legend>
+                  <i class="uil uil-phone"></i>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    name="email"
+                  />
+                </fieldset>
+                <div
+                  class="email error"
+                  style="color: red; margin-top: 5px"
+                ></div>
+              </form>
+              <p>
+                By Continuing, you confirm ownership of this phone number and
+                agree to receive automated texts to verify it. Standard message
+                and data rates may apply.
+              </p>
+              <!-- ==================== BUTTON ================ -->
+              <!-- <buttons >Continue</button> -->
+              <a href="../HTML/Confirmation.html"
+                ><button class="buttonx">Continue</button></a
+              >
+              <div class="login">
+                <p>
+                  Already have an account?<a href="Login.html"
+                    ><span>Log in</span></a
+                  >
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    <main>
-        <aside>
-            <img src="../Images/image2.png" alt="image2">
-        </aside>
-        <section>
-            <div class="container">
-                <div class="right-side">
-                    <div class="form-content">
-                        <!-- ============= LOGO ================= -->
-                        <div class="logo">
-                            <a href="#"><img src="../Images/Vector.png" alt="logo"></a>
-                        </div>
-                        <div class="headings">
-                            <h2>Hello! Welcome</h2>
-                            <h3>First, please enter your Email</h3>
-                        </div>
-                        <!-- ================ FORM ================= -->
-                        <form action="/verification/send-code" method="POST">
-                            <fieldset>
-                                <legend>Email</legend>
-                                <i class="uil uil-phone"></i>
-                                <input type="email" placeholder="Enter your email" name="email">
-                            </fieldset>
-                            <div class="email error" style="color: red; margin-top: 5px;"></div>
-                        </form>
-                        <p>By Continuing, you confirm ownership of this phone number and
-                            agree to receive automated texts to verify it. Standard message
-                            and data rates may apply.
-                        </p>
-                        <!-- ==================== BUTTON ================ -->
-                        <!-- <buttons >Continue</button> -->
-                        <a href="../HTML/Confirmation.html"><button class="buttonx">Continue</button></a>
-                        <div class="login">
-                            <p>Already have an account?<a href="Login.html"><span>Log in</span></a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      </section>
     </main>
     <script>
-        const form = document.querySelector('form');
-        const emailError = document.querySelector('.email.error');
-        const btn = document.querySelector('.buttonx');
-        console.log(btn);
+      const form = document.querySelector("form");
+      const emailError = document.querySelector(".email.error");
+      const btn = document.querySelector(".buttonx");
+      console.log(btn);
 
-        //adding event listener to the button
-        btn.addEventListener('click', async (e) => {
-            e.preventDefault();
+      //adding event listener to the button
+      btn.addEventListener("click", async (e) => {
+        e.preventDefault();
 
+        const emailValue = form.email.value;
+        if (emailValue === "") {
+          emailError.textContent = "Please enter your email!";
+        }
+        console.log(emailValue);
+        const url = "https://keke-pay-97cm.onrender.com";
+        // const url = 'http://localhost:5500'
+        try {
+          const res = await fetch(`${url}/verification/send-code`, {
+            method: "POST",
+            body: JSON.stringify({ email: emailValue }),
+            headers: { "Content-Type": "application/json" },
+          });
 
-            const emailValue = form.email.value;
-            if (emailValue === '') {
-                emailError.textContent = 'Please enter your email!'
-            }
-            console.log(emailValue);
-            const url = 'https://keke-pay-97cm.onrender.com'
-            // const url = 'http://localhost:5500'
-            try {
-                const res = await fetch(`${url}/verification/send-code`, {
-                    method: 'POST',
-                    body: JSON.stringify({ email: emailValue }),
-                    headers: { 'Content-Type': 'application/json' },
-                });
+          const data = await res.json();
+          console.log(`${data.message}`);
 
-                const data = await res.json();
-                console.log(`${data.message}`);
-
-                if (res.ok) {
-                    alert(`${data.message}`)
-                    localStorage.setItem('userId', data.userId);
-                    location.assign('Confirmation.html');
-                }
-
-            } catch (error) {
-                console.log(error.message);
-            }
-        });
-
+          if (res.ok) {
+            alert(`${data.message}`);
+            localStorage.setItem("userId", data.userId);
+            location.assign("Confirmation.html");
+          }
+        } catch (error) {
+          console.log(error.message);
+        }
+      });
     </script>
 
-<!-- Footer -->
-<footer>
-    <div class="reach-us">
-      <div class="reach contactus">
-        <i class="fa-solid fa-phone-volume fa-2x"></i>
-        <div class="text">
-          <h3>08069182114</h3>
-          <p>Contact us if you have a question</p>
+    <!-- Footer -->
+    <footer>
+      <div class="reach-us">
+        <div class="reach contactus">
+          <i class="fa-solid fa-phone-volume fa-2x"></i>
+          <div class="text">
+            <h3>08069182114</h3>
+            <p>Contact us if you have a question</p>
+          </div>
+        </div>
+        <div class="reach emailus">
+          <i class="fa-solid fa-envelope fa-2x"></i>
+          <div class="text">
+            <h3>khalidkekepay@gmail.com</h3>
+            <p>Drop us an email and we will get back to you</p>
+          </div>
+        </div>
+        <div class="reach time">
+          <i class="fa-regular fa-clock fa-2x"></i>
+          <div class="text">
+            <h3>Monday to Saturday</h3>
+            <p>We are open from 9:00 PM to 6:00 PM</p>
+          </div>
         </div>
       </div>
-      <div class="reach emailus">
-        <i class="fa-solid fa-envelope fa-2x"></i>
-        <div class="text">
-          <h3>khalidkekepay@gmail.com</h3>
-          <p>Drop us an email and we will get back to you</p>
+      <div class="footer-line"></div>
+
+      <p class="mainfoot">
+        &copy 2023 keke-pay <span id="spn">All right reserved</span>
+      </p>
+    </footer>
+
+    <!-- -------------------------------------- -->
+    <div class="mobileFooter">
+      <div class="mft">
+        <div class="mbtc">
+          <p>08069182114</p>
+          <p class="mc">Contact us if you have a question</p>
+        </div>
+        <div class="mbtm">
+          <p>khalidkekepay@gmail.com</p>
+          <p class="mc">Drop us an email and we will get back to you</p>
         </div>
       </div>
-      <div class="reach time">
-        <i class="fa-regular fa-clock fa-2x"></i>
-        <div class="text">
-          <h3>Monday to Saturday</h3>
-          <p>We are open from 9:00 PM to 6:00 PM</p>
-        </div>
+      <div class="ml"></div>
+      <div class="mlinks">
+        <a href="../index.html">HOME</a>
+        <a href="../HTML/Agent Login.html">AGENT</a>
+        <a href="../src/structure/blog.html">ABOUT-US</a>
+        <a href="../src/structure/contact.html">SUPPORT</a>
       </div>
+      <div class="ml"></div>
+      <p style="margin-bottom: 2rem">&copy 2023 keke-pay All right reserved</p>
     </div>
-    <div class="footer-line"></div>
-
-    <p class="mainfoot">
-      &copy 2023 keke-pay <span id="spn">All right reserved</span>
-    </p>
-  </footer>
-</body>
-
+    <!-- ------------------ -->
+  </body>
 </html>

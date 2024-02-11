@@ -1019,7 +1019,7 @@ footer span {
 /* ------------------------------------- */
 
 /* Mobile view */
-@media (max-width: 765px) {
+@media (max-width: 965px) {
   /* Resetting some styles */
   .nav__container {
     display: none;
