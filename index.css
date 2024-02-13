@@ -1081,6 +1081,7 @@ footer span {
     width: 80%;
     left: 0;
     right: 0;
+    /* margin-top: 1px; */
   }
   .keke-pay-container .words {
     color: var(--color-black);
@@ -1343,5 +1344,8 @@ footer span {
     font-size: 22px;
     max-width: 300px;
     margin: 0 10px;
+  }
+  .keke-pay-container .words h1 {
+    line-height: 25px;
   }
 }
