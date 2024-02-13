@@ -12,6 +12,40 @@
 
 <body>
 
+    <div class="mobilenav" id="mobilenav">
+        <ul>
+          <li>
+            <a class="first" href="agentDashboard.html"
+              ><i class="uil uil-create-dashboard"></i>Dashboard</a
+            >
+          </li>
+          <li>
+            <a class="second" href="agentDashboard__history.html"
+              ><i class="uil uil-transaction"></i>History</a
+            >
+          </li>
+          <li>
+            <a class="third" href="agentDashboard__Settings.html"
+              ><i class="uil uil-notes"></i>Settings</a
+            >
+          </li>
+  
+          <div class="referdown" style="margin-top: 30px">
+            <li><a href="#">Support</a></li>
+            <li>
+              <a href="Agent Login.html"
+                >Log out <i class="uil uil-signout"></i
+              ></a>
+            </li>
+          </div>
+        </ul>
+      </div>
+  
+      <div class="topnav">
+        <img class="navlogo" src="../Images/logo.jpg" alt="" />
+        <img id="navshow" src="../Images/icon-menu.svg" alt="" />
+      </div>
+
     <!-- ASIDE START -->
     <div class="container">
         <aside>
@@ -97,6 +131,22 @@
 
 
     <script>
+// nav toggle
+document.addEventListener("DOMContentLoaded", function () {
+        const navshow = document.getElementById("navshow");
+        const mobilenav = document.getElementById("mobilenav");
+
+        navshow.addEventListener("click", function () {
+          mobilenav.classList.toggle("show");
+          if (mobilenav.classList.contains("show")) {
+            navshow.src = "../Images/icon-close.svg";
+          } else {
+            navshow.src = "../Images/icon-menu.svg";
+          }
+        });
+      });
+
+
         // Function to change user password
         const btn = document.getElementById('second')
         btn.addEventListener('click', async function (e) {

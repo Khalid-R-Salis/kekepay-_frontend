@@ -1016,10 +1016,16 @@ footer span {
   z-index: 2;
 }
 
+#oddimg {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
 /* ------------------------------------- */
 
 /* Mobile view */
-@media (max-width: 765px) {
+@media (max-width: 820px) {
   /* Resetting some styles */
   .nav__container {
     display: none;
@@ -1251,5 +1257,91 @@ footer span {
   .mc {
     line-height: 15px;
     font-size: 15px;
+  }
+  .sea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+  }
+  .odd2 h3 {
+    text-align: center;
+    margin: 0 10px;
+  }
+  /* -------------------- */
+  .cardnw,
+  .newcardd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 15rem;
+    align-items: center;
+    border-radius: 15px;
+    background: var(--color-white);
+    color: gray;
+    box-shadow: 4px 4px 8px 7px rgba(0, 0, 0, 0.25);
+    height: 300px;
+    line-height: 22px;
+  }
+  .cardnw img,
+  .newcardd img {
+    width: 50px;
+  }
+  .cardnw h4,
+  .newcardd h4 {
+    margin-top: 10px;
+  }
+  .cardnw2 h1 {
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .number-container .words h1 {
+    font-size: 38px;
+    padding-right: 10px;
+    padding-right: 10px;
+  }
+  .testimonail-body h3 {
+    width: 230px;
+    text-align: center;
+    min-width: 15px;
+  }
+  .testimonial-info img {
+    height: 40px;
+    width: 40px;
+  }
+  #oddimg {
+    height: 40px;
+    width: 40px;
+  }
+  .testimonial-info h4,
+  .testimonial-info h4 {
+    font-size: 20px;
+    line-height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 8px;
+  }
+  .start-container .words {
+    gap: 13px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .start-container .words button {
+    margin-left: 0;
+    padding: 12px;
+  }
+  .faqs-container .faqs-right h2 {
+    font-size: 20px;
+  }
+  .faqs-container .faqs-right h3 {
+    text-align: center;
+    font-size: 22px;
+    max-width: 300px;
+    margin: 0 10px;
   }
 }

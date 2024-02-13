@@ -403,8 +403,11 @@ footer {
 footer span {
   text-decoration: underline;
 }
-@media (max-width: 765px) {
+@media (max-width: 800px) {
   /* Resetting some styles */
+  body {
+    overflow-x: hidden;
+  }
   nav {
     display: none;
   }

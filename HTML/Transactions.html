@@ -1,93 +1,165 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../styles/Transactions.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="../styles/Transactions.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
     <script src="main.js"></script>
+  </head>
 
-</head>
-
-<body>
-    <div class="container">
-        <!-- <aside> -->
-        <!-- ... Your existing aside content ... -->
-        <!-- </aside> -->
-        <div class="container">
-            <aside>
-                <img class="logo" src="../Images__Dashboard/logo.jpg" alt="">
-                <div class="container__aside">
-                    <div class="links__top">
-                        <li><a class="first" href="Dashboard.html"><i class="uil uil-create-dashboard"></i>Dashboard</a>
-                        </li>
-                        <li><a class="second" href="Payments.html"><i class="uil uil-transaction"></i>Payment</a></li>
-                        <li><a class="third" href="Transactions.html"><i class="uil uil-notes"></i>Transactions</a></li>
-                        <li><a class="fourth" href="Settings.html"><i class="uil uil-cog"></i>Settings</a></li>
-
-                    </div>
-
-                    <div class="links__bottom">
-                        <li><a href="Refer.html">Refer a friend</a></li>
-                        <li><a href="">Support</a></li>
-                        <li><a href="Login.html">Log out <i class="uil uil-signout"></i></a></li>
-                    </div>
-                </div>
-            </aside>
-
-            <div class="transaction__area">
-                <div class="top__transaction__area">
-                    <li>Your transaction history</li>
-                    <li><a href=""><button class="view"
-                                style="cursor:  pointer;background-color: white; border: none;  font-size: large;">View
-                                all</button> </a>
-                    </li>
-                </div>
-                <hr>
-                <div class="list">
-                    <strong>Date</strong>
-                    <strong>Description</strong>
-                    <strong>Amount</strong>
-                    <strong>Reciept no.</strong>
-                    <strong>Status</strong>
-                </div>
-                <div class="history" id="transactionHistory">
-                    <!-- Transaction history will be dynamically inserted here -->
-                </div>
-            </div>
+  <body>
+    <div class="mobilenav" id="mobilenav">
+      <ul>
+        <li>
+          <a class="first" href="../HTML/Dashboard.html">Dashboard</a>
+        </li>
+        <li>
+          <a class="second" href="../HTML/Payments.html">Payment</a>
+        </li>
+        <li>
+          <a class="third" href="../HTML/Transactions.html">Transactions</a>
+        </li>
+        <li>
+          <a class="fourth" href="../HTML/Settings.html">Settings</a>
+        </li>
+        <div class="referdown" style="margin-top: 30px">
+          <li><a href="Refer.html">Refer a friend</a></li>
+          <li>
+            <a href="Login.html">Log out <i class="uil uil-signout"></i></a>
+          </li>
         </div>
+      </ul>
+    </div>
 
-        <script>
-            const viewAll = document.querySelector('.view');
-            console.log(viewAll);
-            viewAll.addEventListener('click', async function (e) {
-                e.preventDefault();
-                const baseUrl = 'https://keke-pay-97cm.onrender.com'
+    <div class="topnav">
+      <img class="navlogo" src="../Images/logo.jpg" alt="" />
+      <img id="navshow" src="../Images/icon-menu.svg" alt="" />
+    </div>
 
-                // const baseUrl = 'http://localhost:5500';
-                const userId = localStorage.getItem('userId');
+    <div class="container">
+      <aside>
+        <img class="logo" src="../Images__Dashboard/logo.jpg" alt="" />
+        <div class="container__aside">
+          <div class="links__top">
+            <ul>
+              <li>
+                <a class="first" href="Dashboard.html"
+                  ><i class="uil uil-create-dashboard"></i>Dashboard</a
+                >
+              </li>
+              <li>
+                <a class="second" href="Payments.html"
+                  ><i class="uil uil-transaction"></i>Payment</a
+                >
+              </li>
+              <li>
+                <a class="third" href="Transactions.html"
+                  ><i class="uil uil-notes"></i>Transactions</a
+                >
+              </li>
+              <li>
+                <a class="fourth" href="Settings.html"
+                  ><i class="uil uil-cog"></i>Settings</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="links__bottom">
+            <ul>
+              <li><a href="Refer.html">Refer a friend</a></li>
+              <li><a href="">Support</a></li>
+              <li>
+                <a href="Login.html">Log out <i class="uil uil-signout"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
 
-                const transactionHistoryElement = document.getElementById('transactionHistory');
-                // http://localhost:5500/payments/6567d9f9f6f45a5e4ff44dba
+      <div class="transaction__area">
+        <div class="top__transaction__area">
+          <ul>
+            <li>Your Transaction Scroll L&R</li>
+            <li>
+              <a href=""
+                ><button
+                  class="view"
+                  style="
+                    cursor: pointer;
+                    background-color: white;
+                    border: none;
+                    font-size: large;
+                  "
+                >
+                  View all
+                </button></a
+              >
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="list">
+          <strong>Date</strong>
+          <strong>Description</strong>
+          <strong>Amount</strong>
+          <strong>Receipt no.</strong>
+          <strong>Status</strong>
+        </div>
+        <div class="history" id="transactionHistory">
+          <!-- Transaction history will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
 
-                try {
-                    const response = await fetch(`${baseUrl}/payments/${userId}`);
-                    const data = await response.json();
-                    // const { date, keke, amount, reciept } = data
+    <script>
+      // nav toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const navshow = document.getElementById("navshow");
+        const mobilenav = document.getElementById("mobilenav");
 
-                    if (response.ok) {
-                        data.forEach(transaction => {
-                            const transactionRow = document.createElement('div');
-                            transactionRow.classList.add('first__row');
+        navshow.addEventListener("click", function () {
+          mobilenav.classList.toggle("show");
+          if (mobilenav.classList.contains("show")) {
+            navshow.src = "../Images/icon-close.svg";
+          } else {
+            navshow.src = "../Images/icon-menu.svg";
+          }
+        });
+      });
 
-                            const formattedDate = new Date(transaction.date).toLocaleDateString();
+      const viewAll = document.querySelector(".view");
+      console.log(viewAll);
+      viewAll.addEventListener("click", async function (e) {
+        e.preventDefault();
+        const baseUrl = "https://keke-pay-97cm.onrender.com";
 
-                            transactionRow.innerHTML = `
+        // const baseUrl = 'http://localhost:5500';
+        const userId = localStorage.getItem("userId");
+
+        const transactionHistoryElement =
+          document.getElementById("transactionHistory");
+        // http://localhost:5500/payments/6567d9f9f6f45a5e4ff44dba
+
+        try {
+          const response = await fetch(`${baseUrl}/payments/${userId}`);
+          const data = await response.json();
+          // const { date, keke, amount, reciept } = data
+
+          if (response.ok) {
+            data.forEach((transaction) => {
+              const transactionRow = document.createElement("div");
+              transactionRow.classList.add("first__row");
+
+              const formattedDate = new Date(
+                transaction.date
+              ).toLocaleDateString();
+
+              transactionRow.innerHTML = `
                             <li>${formattedDate}</li>
                             <li>${transaction.description}</li>
                             <li id="amount">N${transaction.amount}</li>
@@ -95,18 +167,19 @@
                             <li id="Status"><img src="../Images/Ellipse 4.svg" alt="" h4>${transaction.status}</li>
                   `;
 
-                            transactionHistoryElement.appendChild(transactionRow);
-                        });
-                    } else {
-                        console.error(`Failed to fetch transactions. Error: ${data.message}`);
-                    }
-                } catch (error) {
-                    console.error('Error fetching transactions:', error);
-                }
+              transactionHistoryElement.appendChild(transactionRow);
             });
+          } else {
+            console.error(
+              `Failed to fetch transactions. Error: ${data.message}`
+            );
+          }
+        } catch (error) {
+          console.error("Error fetching transactions:", error);
+        }
+      });
 
-            // document.addEventListener("DOMContentLoaded",);
-        </script>
-</body>
-
+      // document.addEventListener("DOMContentLoaded",);
+    </script>
+  </body>
 </html>
